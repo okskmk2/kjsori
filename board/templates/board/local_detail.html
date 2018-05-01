@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>지역보존회</h2>
+<nav>
+    <a href="/local/">목록</a>
+    {% if user.is_staff %}
+    <a>삭제</a>
+    <a>수정</a>
+    {% else %}
+    <a>접속 아님</a>
+    {% endif %}
+</nav>
+        <div>{{ local.id }}</div>
+        <div>{{ local.title }}</div>
+        <div>{{ local.content }}</div>
+        <div>{{ local.author_id }}</div>
+        <div>{{ local.edited_at }}</div>
+    </tr>
+    </tbody>
+    </table>
+{% endblock %}

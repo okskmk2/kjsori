@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>활동사진</h2>
+    <table>
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>글쓴이</th>
+        <th>작성일</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for article in picture_list %}
+    <tr>
+        <td>{{ article.id }}</td>
+        <td>{{ article.title }}</td>
+        <td>{{ article.author_id }}</td>
+        <td>{{ article.edited_at }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

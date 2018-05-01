@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    {% load static %}
+    <script src="{% static "ckeditor/ckeditor.js" %}"></script>
+    <h2>지역보존회 글쓰기</h2>
+    <a href="/local">목록으로</a>
+    <form action="/local/add" method="post">
+        {% csrf_token %}
+        <input name="author_id" value="{{ user.id }}">
+        <input name="title">
+        <textarea name="content" id="content"></textarea>
+        <button type="submit">등록</button>
+    </form>
+    <script>
+        CKEDITOR.replace( 'content' );
+    </script>
+{% endblock %}

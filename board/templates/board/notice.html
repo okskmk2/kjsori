@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>공지사항</h2>
+    <table>
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>글쓴이</th>
+        <th>작성일</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for notice in notice_list %}
+    <tr>
+        <td>{{ notice.id }}</td>
+        <td>{{ notice.title }}</td>
+        <td>{{ notice.author_id }}</td>
+        <td>{{ notice.edited_at }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

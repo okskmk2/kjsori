@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>지역보존회</h2>
+    {% if user.is_staff %}
+        <a href="/local/add">글쓰기</a>
+    {% endif %}
+    <table>
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>글쓴이</th>
+        <th>작성일</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for article in local_list %}
+    <tr>
+        <td><a href="/local/{{ article.id }}">{{ article.id }}</a></td>
+        <td>{{ article.title }}</td>
+        <td>{{ article.author_id }}</td>
+        <td>{{ article.edited_at }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}
