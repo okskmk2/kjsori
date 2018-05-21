@@ -1,0 +1,80 @@
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/asset/kjsori.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <nav id="unb">
+                <a href="login.jsp">로그인</a>
+                <a href="join.jsp">회원가입</a>
+                <a href="sitemap.html">사이트맵</a>
+            </nav>
+            <div class="row">
+                <a href="/index.jsp"><h1>성균관 경전소리 보존회</h1></a>
+                <nav id="gnb">
+                    <div>
+                        <a href="/about.jsp">기관안내</a>
+                        <nav>
+                            <a href="/about.jsp">설립취지</a>
+                            <a href="">인사말</a>
+                            <a href="">연혁</a>
+                            <a href="">조직도</a>
+                            <a href="">교수진소개</a>
+                            <a href="">오시는길</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <a href="">학사안내</a>
+                        <nav>
+                            <a href="">학사일정</a>
+                            <a href="">교과목안내</a>
+                            <a href="">강의시간표</a>
+                            <a href="">보존회 규정</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <a href="">입학안내</a>
+                        <nav>
+                            <a href="">입학안내</a>
+                            <a href="">입학신청</a>
+                            <a href="">교재신청</a>
+                            <a href="">청강신청</a>
+                            <a href="">인증서과정</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <a href="">커뮤니티</a>
+                        <nav>
+                            <a href="">공지사항</a>
+                            <a href="">자유게시판</a>
+                            <a href="">사진광장</a>
+                            <a href="">회원등급신청</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <a href="">행사안내</a>
+                        <nav>
+                            <a href="">임간수업(여름)</a>
+                            <a href="">동양고전워크샾(겨울)</a>
+                            <a href="">중국답사기행</a>
+                        </nav>
+                    </div>
+                    <div>
+                        <a href="/archieve.jsp">자료실</a>
+                        <nav>
+                            <a href="">참고자료</a>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
