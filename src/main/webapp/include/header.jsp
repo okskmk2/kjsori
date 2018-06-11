@@ -1,14 +1,15 @@
-<%@ page language="java" pageEncoding="UTF-8"
-	trimDirectiveWhitespaces="true"%>
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="/asset/kjsori.css">
-<title>Document</title>
+<script src="/asset/axios.js"></script>
+<script src="/asset/util.js"></script>
+<title>성균관 경전소리 보존회</title>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 				<a href="join.jsp">회원가입</a>
 			</nav>
 			<div class="row">
-				<a href="index.jsp"><h1>성균관 경전소리 보존회</h1></a>
+				<h1><a href="index.jsp">성균관 경전소리 보존회</a></h1>
 				<nav id="gnb">
 					<a href="about.jsp">기관소개</a>
 					<a href="reading.jsp">경전성독</a>

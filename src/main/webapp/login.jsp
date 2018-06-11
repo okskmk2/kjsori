@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8"
 	trimDirectiveWhitespaces="true"%>
 <%@ include file="include/header.jsp"%>
-<main>
+<div id="main">
 <div class="wrap">
 	<div class="content">
 		<h2>로그인</h2>
@@ -13,22 +13,22 @@
 							<input type="text" placeholder="아이디"> <input type="text"
 								placeholder="비밀번호" style="margin-top: 3px;">
 						</div>
-						<button id="login_btn" class="ml3">로그인</button>
+						<a id="login_btn" class="ml3 big btn">로그인</a>
 					</div>
 				</div>
 				<div style="margin-left: 30px;" class="rest">
 					<div>
 						<span>아직 회원이 아니신가요?</span> <br>
-						<button>회원가입</button>
+						<a href="/join.jsp" class="btn">회원가입</a>
 					</div>
 					<div>
 						<span>아이디/비밀번호를 분실하셨나요?</span> <br>
-						<button>아이디/비밀번호 찾기</button>
+						<a href="/idpw_search.jsp" class="btn">아이디/비밀번호 찾기</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</main>
+</div>
 <%@ include file="include/footer.jsp"%>

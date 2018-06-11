@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@ include file="include/header.jsp" %>
-    <main>
+    <div id="main">
         <div class="wrap row xp30">
             <div class="col">
                 <div class="big banner">회전목마</div>
@@ -15,5 +15,18 @@
                 <div class="banner">오시는길</div>
             </div>
         </div>
-    </main>
+    </div>
+    <script>
+    axios({
+    	url:'/api/idcheck',
+    	method:'post',
+    	data:{
+    		id:'이은성'
+    	}
+    }).then(function(resp){
+    	console.log(resp);
+    }).catch(function(error){
+    	console.log(error);
+    });
+    </script>
 <%@ include file="include/footer.jsp" %>

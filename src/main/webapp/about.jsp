@@ -1,11 +1,11 @@
 <%@ page language="java" pageEncoding="UTF-8"
 	trimDirectiveWhitespaces="true"%>
 <%@ include file="include/header.jsp"%>
-<main>
+<div id="main">
 <div class="wrap">
 	<div class="content">
 		<h2>기관소개</h2>
-		<img src="/asset/builders.jpeg">
+		<img src="/upload/builders.jpeg">
 		<p class="accent-text big">선배 제현님들께 알려 드립니다.</p>
 		<p>경전을 읽는 아름다운소리와 전통문화를 계승 발전시키고 보존하며 경전교육과 경전소리 교육을 통하여 성현의 말씀을
 			가슴에 담고 실천하는 인간 본연의 인의예지신의 본성을 회복하고자 "성균관경전소리보존회" 를 창립하여 활동하고자 합니다.
@@ -17,11 +17,11 @@
 		
 		<h3>기관사진</h3>
 		<figure>성독연구원 강의실</figure>
-		<img src="/asset/facility1.jpeg">
+		<img src="/upload/facility1.jpeg">
 		
 		<figure>연구실</figure>
-		<img src="/asset/facility2.jpeg">
+		<img src="/upload/facility2.jpeg">
 	</div>
 </div>
-</main>
+</div>
 <%@ include file="include/footer.jsp"%>

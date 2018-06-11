@@ -49,7 +49,7 @@ img{
 	width:100%;
 }
 
-main{
+#main{
     background-color: #eaeaea;
     padding:30px 0;
 }
@@ -148,6 +148,22 @@ input {
     border: 1px solid #d8d8d8;
     padding: 50px;
     background-color: #fafafa;
+}
+
+.btn{
+	background-color: #777;
+	color:white;
+	font-size: 0.9rem;
+	padding:0.1rem 0.2rem;
+	border-radius:0.1rem;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.big.btn{
+	padding:0.2rem 0.6rem;
+	font-size: 1rem;
 }
 
 /* navs */
