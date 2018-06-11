@@ -19,11 +19,11 @@
 				<div style="margin-left: 30px;" class="rest">
 					<div>
 						<span>아직 회원이 아니신가요?</span> <br>
-						<a href="/join.jsp" class="btn">회원가입</a>
+						<a href="/join.jsp" class="link">회원가입</a>
 					</div>
 					<div>
 						<span>아이디/비밀번호를 분실하셨나요?</span> <br>
-						<a href="/idpw_search.jsp" class="btn">아이디/비밀번호 찾기</a>
+						<a href="/idpw_search.jsp" class="link">아이디/비밀번호 찾기</a>
 					</div>
 				</div>
 			</div>

@@ -84,7 +84,7 @@
 					<tr>
 						<th>아이디</th>
 						<td><input>
-							<button id="id_dupl_chk_btn">중복확인</button></td>
+							<button id="id_dupl_chk_btn" class='small'>중복확인</button></td>
 					</tr>
 					<tr>
 						<th>이름</th>
@@ -109,7 +109,7 @@
 					<tr>
 						<th>현주소</th>
 						<td><input>
-							<button>우편번호 검색</button></td>
+							<button class='small'>우편번호 검색</button></td>
 					</tr>
 					<tr>
 						<th></th>

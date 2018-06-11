@@ -72,9 +72,18 @@ a{
     color:inherit;
 }
 
-input {
+input{
     font-size: 16px;
     padding: 5px;
+}
+
+textarea{
+	resize: none;
+    width:97%;
+	padding:10px;
+	margin:0;	
+    font: 400 16px 'Noto Sans';
+    line-height: 1.5;
 }
 
 /* layout classes */
@@ -113,6 +122,10 @@ input {
 
 .rest{
     flex-grow: 1;
+}
+
+.jc-end{
+	justify-content: flex-end;
 }
 
 .xp30{
@@ -154,7 +167,7 @@ input {
 	background-color: #777;
 	color:white;
 	font-size: 0.9rem;
-	padding:0.1rem 0.2rem;
+	padding:0.1rem 0.4rem;
 	border-radius:0.1rem;
 	display: inline-flex;
 	align-items: center;
@@ -162,8 +175,30 @@ input {
 }
 
 .big.btn{
-	padding:0.2rem 0.6rem;
+	padding:0.2rem 2rem;
 	font-size: 1rem;
+}
+
+.link{
+	color:#1da1ff;
+}
+
+button{
+	font-size: 15px;
+	width: 110px;
+	height: 40px;
+	padding: 5px 10px;
+	color: #fff;
+	border-radius: 3px;
+	border-style: none;
+	background-color: #6b6b6b;
+}
+button.small{
+    background-color: #777;
+    font-size: 14px;
+    padding: 4px 8px;
+    width: auto;
+    height: auto;
 }
 
 /* navs */
