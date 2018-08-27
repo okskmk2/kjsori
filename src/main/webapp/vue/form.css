@@ -1,0 +1,28 @@
+button {
+    border-width: 0;
+    background-color: #777;
+    color:#fff;
+    padding:0.25rem 0.75rem;
+    display: inline-flex;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: #555;
+}
+
+textarea, input{
+    border-width: 0;
+    box-shadow: inset 0 0 0 1px #ccc;
+    padding:0.5rem;
+    margin-bottom: 0.25rem;
+    display: block;
+    font: normal 1rem 'Noto Sans';
+}
+
+label+input{
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
