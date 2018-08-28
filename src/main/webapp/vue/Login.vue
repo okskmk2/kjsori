@@ -8,7 +8,7 @@
             <input type="text">
             <label for="">비밀번호</label>
             <input type="password">
-            <button>로그인</button>
+            <button class='primary'>로그인</button>
         </div>
     </div>
 </template>

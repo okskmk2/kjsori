@@ -18,8 +18,9 @@
             <div v-if="openArticle">
                 <h4>글쓰기 등록</h4>
                 <div>
-                    <input type="text" style="width:58rem">
-                    <textarea rows='15' style="width:58rem"></textarea>
+                    <input type="text" style="width:60rem">
+                    <!-- <div class='board-control-box'><button>그림</button><button>동영상</button></div> -->
+                    <textarea rows='15' style="width:60rem;"></textarea>
                     <div class='tr'>
                         <button @click="closeAddForm()">완료</button>
                     </div>
