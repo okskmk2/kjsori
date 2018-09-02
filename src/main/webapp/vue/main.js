@@ -5,7 +5,7 @@ import axios from "axios";
 
 Vue.prototype.axios = axios;
 
-const vm = new Vue({
+new Vue({
     el: '#app',
     router,
     render: h=> h(App)

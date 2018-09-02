@@ -18,9 +18,7 @@
             <div v-if="openArticle">
                 <h4>글쓰기 등록</h4>
                 <div>
-                    <input type="text" style="width:60rem">
-                    <!-- <div class='board-control-box'><button>그림</button><button>동영상</button></div> -->
-                    <textarea rows='15' style="width:60rem;"></textarea>
+                    <vue-editor v-model="content"></vue-editor>
                     <div class='tr'>
                         <button @click="closeAddForm()">완료</button>
                     </div>
@@ -30,22 +28,17 @@
     </div>
 </template>
 <script>
+import { VueEditor } from 'vue2-editor'
 export default {
   data() {
     return {
       controlBox: true,
       openList: true,
       openArticle: false,
-      articleList: []
+      articleList: [],
+      content:""
     };
   },
-//   mounted() {
-//     this.axios
-//       .get("https://jsonplaceholder.typicode.com/posts")
-//       .then(res => {
-//         this.articleList = res.data;
-//       });
-//   },  
   props: ["settings"],
   methods: {
     addArticle() {
@@ -57,7 +50,12 @@ export default {
       this.controlBox = true;
       this.openArticle = false;
       this.openList = true;
+      console.log(this.content);
     }
-  }
+  },
+   components: {
+      VueEditor
+   },
 };
 </script>
+

@@ -18,7 +18,7 @@
             </nav>        
         </div>
     </header>
-    <router-view class='row wrap' style="min-height:47rem"/>
+    <router-view class='row wrap' style="min-height:47rem;margin-top:1rem;"/>
 </div>
 </template>
 <script>
