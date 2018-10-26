@@ -29,12 +29,12 @@
 	height: 500px;
 }
 
-.join-btns {
+.btns {
 	text-align: center;
 	margin-top: 30px;
 }
 
-.join-btns>button {
+.btns>button {
 	font-size: 15px;
 	width: 110px;
 	height: 40px;
@@ -49,45 +49,26 @@
 	<div class="wrap">
 		<div class="content">
 			<h2>글 등록</h2>
+			<form action="add" method="POST">
+			<input type="hidden" name="board_code" value="${param.board_code}">
 			<table id="form-table">
 				<tbody>
 					<tr>
 						<th>제목</th>
-						<td><input></td>
+						<td><input name="title"></td>
 					</tr>
 					<tr>
 						<th>내용</th>
-						<td><textarea></textarea></td>
+						<td><textarea name="content"></textarea></td>
 					</tr>
 				</tbody>
 			</table>
-			<div class="join-btns">
-				<button style="background-color: seagreen;">등록</button>
-				<button>취소</button>
+			<div class="btns">
+				<button style="background-color: seagreen;" type="submit">등록</button>
+				<button type="reset">취소</button>
 			</div>
+			</form>
 		</div>
 	</div>
 </div>
-<script>
-	let id_dupl_chk_btn = document.getElementById('id_dupl_chk_btn');
-
-	id_dupl_chk_btn.addEventListener('click', function() {
-		ajax({
-			url : "/api/idcheck",
-			method : "post",
-			data:{
-				id:'한글'
-			},
-			onsuccess : function(response) {
-				alert(response);
-			},
-			onerror : function(error) {
-				alert(error);
-			}
-		});
-	});
-
-
-
-</script>
 <%@ include file="include/footer.jsp"%>

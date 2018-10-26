@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URLDecoder;
 
-import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -20,7 +19,7 @@ import org.json.JSONObject;
 /**
  * Servlet Filter implementation class CommonFilter
  */
-//@WebFilter("/api/*")
+@WebFilter("/api/*")
 public class CommonFilter implements Filter {
 
     /**

@@ -17,7 +17,7 @@
         </div>
     </div>
     <script>
-    axios({
+/*     axios({
     	url:'/api/idcheck',
     	method:'post',
     	data:{
@@ -27,6 +27,6 @@
     	console.log(resp);
     }).catch(function(error){
     	console.log(error);
-    });
+    }); */
     </script>
 <%@ include file="include/footer.jsp" %>
