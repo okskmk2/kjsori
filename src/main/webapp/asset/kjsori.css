@@ -229,3 +229,15 @@ button.small{
 #gnb>a{
     padding: 0 15px 10px;
 }
+
+/* modified skkh.css by eunsung */
+.bbs_list {border-top:#656565 3px solid; width:100%; border-collapse:collapse;}
+.bbs_list th { text-align:center; font-weight:bold; color:#333;}
+.bbs_list th:first-child {width: 10%}
+.bbs_list th:nth-child(2) {width: 55%}
+.bbs_list th:nth-child(3) {width: 10%}
+.bbs_list th:nth-child(4) {width: 10%}
+.bbs_list th:nth-child(5) {width: 15%}
+.bbs_list tr { border-bottom:#eaeaea 1px solid; height:50px; }
+.bbs_list td {text-align:center; font-size:14px; }
+.bbs_list td:nth-child(2) { font-size: 17px; text-align:left; }

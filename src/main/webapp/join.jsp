@@ -50,15 +50,8 @@
 	margin-top: 30px;
 }
 
-.join-btns>button {
-	font-size: 15px;
-	width: 110px;
-	height: 40px;
-	padding: 5px 10px;
-	color: #fff;
-	border-radius: 3px;
-	border-style: none;
-	background-color: #6b6b6b;
+.join-btns>button:first-child {
+	margin-right: 5px; 
 }
 </style>
 <div id="main">
@@ -147,9 +140,6 @@
 			}
 		});
 	});
-
-
-
 
 </script>
 <%@ include file="include/footer.jsp"%>

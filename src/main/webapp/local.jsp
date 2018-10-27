@@ -2,28 +2,30 @@
 	trimDirectiveWhitespaces="true"%>
 <%@ include file="include/header.jsp"%>
 <div id="main">
-<div class="wrap">
-	<div class="content">
-		<h2>지역보존회</h2>
-		<div class="row jc-end">
-		<a class="btn" href="addform.jsp?board_code=local">글쓰기</a>
+	<div class="wrap">
+		<div class="content">
+			<h2>지역보존회</h2>
+			<table class="bbs_list">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성자</th>
+						<th>조회수</th>
+						<th>등록일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>311</td>
+						<td><a href="#">지역보존회 테스트</a></td>
+						<td>관리자</td>
+						<td>25</td>
+						<td>2018-10-24</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<table>
-		<colgroup>
-		<col>
-		<col>
-		<col>
-		<col>
-		<col>
-		</colgroup>
-		<thead>
-		<tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일자</th><th>조회수</th></tr>
-		</thead>
-		<tbody>
-		<tr><td></td><td></td><td></td><td></td><td></td></tr>
-		</tbody>
-		</table>
 	</div>
-</div>
 </div>
 <%@ include file="include/footer.jsp"%>
