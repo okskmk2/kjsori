@@ -5,6 +5,7 @@
 	<div class="wrap">
 		<div class="content">
 			<h2>공지사항</h2>
+			<div class='bbs_bgroup'><button onclick="javascript:location.href = 'addform.jsp'">글쓰기</button></div>
 			<table class="bbs_list">
 				<thead>
 					<tr>

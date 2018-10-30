@@ -10,19 +10,19 @@
 			<div class="box rest">
 				<div class="row">
 					<div class="col">
-						<input type="text" placeholder="아이디"> <input type="text"
-							placeholder="비밀번호" style="margin-top: 3px;">
+						<input type="text" placeholder="이름" required="required"> <input type="password"
+							placeholder="이메일" style="margin-top: 3px;" required="required">
 					</div>
-					<a id="id_find_btn" class="ml3 big btn">아이디찾기</a>
+					<button id="id_find_btn" class="ml3">아이디찾기</button>
 				</div>
 			</div>
 			<div class="box rest" style="margin-left: 30px;">
 				<div class="row">
 					<div class="col">
-						<input type="text" placeholder="아이디"> <input type="text"
-							placeholder="비밀번호" style="margin-top: 3px;">
+						<input type="text" placeholder="아이디"> <input type="email"
+							placeholder="이메일" style="margin-top: 3px;">
 					</div>
-					<a id="pw_find_btn" class="ml3 big btn">비밀번호찾기</a>
+					<button id="pw_find_btn" class="ml3">비밀번호재설정</button>
 				</div>
 			</div>
 		</div>

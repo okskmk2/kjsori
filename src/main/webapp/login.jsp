@@ -8,13 +8,15 @@
 		<div class="box">
 			<div class="row">
 				<div class="rest">
+					<form action="/login" method="post">
 					<div class="row">
 						<div class="col">
-							<input type="text" placeholder="아이디"> <input type="text"
-								placeholder="비밀번호" style="margin-top: 3px;">
+							<input type="text" placeholder="아이디" name="kjsori_userId" required="required">
+							<input type="password" placeholder="비밀번호" style="margin-top: 3px;" name="kjsori_userPwd" required="required">
 						</div>
-						<a id="login_btn" class="ml3 big btn">로그인</a>
+						<button id="login_btn" class="ml3 big btn" style="padding:5px 20px">로그인</button>
 					</div>
+					</form>
 				</div>
 				<div style="margin-left: 30px;" class="rest">
 					<div>

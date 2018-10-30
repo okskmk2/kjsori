@@ -1,4 +1,4 @@
-package org.bhn;
+package kjsori;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

@@ -2,6 +2,9 @@
 	trimDirectiveWhitespaces="true"%>
 <%@ include file="include/header.jsp"%>
 <style>
+.obj-table.join input{
+width: auto;
+}
 .terms {
 	display: flex;
 	flex-direction: row;
@@ -18,45 +21,15 @@
 
 .term-box {
 	height: 150px;
-	border: 1px solid #ababab;
+	border: 1px solid #ccc;
 	flex-grow: 1;
 }
 
-#join-table {
-	border-collapse: collapse;
-	width: 100%;
-	border-top: 3px solid dimgray;
-	margin-top: 20px;
-}
-
-#join-table tr {
-	border-bottom: #eaeaea 1px solid;
-	height: 50px
-}
-
-#join-table th {
-	text-align: left;
-	width: 160px;
-	padding: 10px 20px;
-	background-color: #f9f9f9;
-}
-
-#join-table td {
-	padding: 10px;
-}
-
-.join-btns {
-	text-align: center;
-	margin-top: 30px;
-}
-
-.join-btns>button:first-child {
-	margin-right: 5px; 
-}
 </style>
 <div id="main">
 	<div class="wrap">
 		<div class="content">
+		<form action="/join" method="post">
 			<h2>회원가입</h2>
 			<div class="terms">
 				<div>
@@ -72,24 +45,23 @@
 				<input type="checkbox"> <span>위의 이용약관, 개인정보취급방침, 개인정보
 					수집 및 이용, 개인정보 취급위탁에 대하여 동의합니다</span>
 			</div>
-			<table id="join-table">
+			<table class="obj-table join">
 				<tbody>
 					<tr>
-						<th>아이디</th>
-						<td><input>
-							<button id="id_dupl_chk_btn" class='small'>중복확인</button></td>
+						<th>아이디(필수)</th>
+						<td><input name='kjsori_userId' required="required"><button id="id_dupl_chk_btn" class='ml5'>중복확인</button></td>
 					</tr>
 					<tr>
-						<th>이름</th>
-						<td><input></td>
+						<th>이름(필수)</th>
+						<td><input name='kjsori_userName' required="required"></td>
 					</tr>
 					<tr>
 						<th>비밀번호</th>
-						<td><input></td>
+						<td><input type="password"></td>
 					</tr>
 					<tr>
-						<th>비밀번호확인</th>
-						<td><input></td>
+						<th>비밀번호확인(필수)</th>
+						<td><input name='kjsori_userPwd' required="required" type="password"></td>
 					</tr>
 					<tr>
 						<th>이메일</th>
@@ -101,12 +73,11 @@
 					</tr>
 					<tr>
 						<th>현주소</th>
-						<td><input>
-							<button class='small'>우편번호 검색</button></td>
+						<td><input><button class='ml5'>우편번호 검색</button></td>
 					</tr>
 					<tr>
 						<th></th>
-						<td><input>&nbsp;-&nbsp; <input></td>
+						<td><input>&nbsp;&nbsp;-&nbsp;&nbsp;<input></td>
 					</tr>
 					<tr>
 						<th>정보수신여부</th>
@@ -115,10 +86,11 @@
 					</tr>
 				</tbody>
 			</table>
-			<div class="join-btns">
-				<button style="background-color: seagreen;">회원가입</button>
-				<button>취소</button>
+			<div class="big btn-group">
+				<button style="background-color: seagreen;" type="submit">회원가입</button>
+				<button type="reset">취소</button>
 			</div>
+			</form>
 		</div>
 	</div>
 </div>

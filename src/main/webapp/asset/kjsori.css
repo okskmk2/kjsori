@@ -2,16 +2,16 @@
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
-    src: local('NotoSansCJKkr-Regular');
-    src: url(/asset/NotoSansCJKkr-Regular.otf);  
+    /* src: local('NotoSansCJKkr-Regular'); */
+    src: url(/asset/NotoSansCJKkr-Regular.otf) format('opentype');  
 }
 
 @font-face {
     font-family: 'Noto Sans';
     font-style: bold;
     font-weight: 700;
-    src: local('NotoSansCJKkr-Medium');
-    src: url(/asset/NotoSansCJKkr-Medium.otf);  
+    /* src: local('NotoSansCJKkr-Medium'); */
+    src: url(/asset/NotoSansCJKkr-Medium.otf) format('opentype');  
 }
 
 body{
@@ -53,12 +53,12 @@ img{
 #main{
     background-color: #eaeaea;
     padding:30px 0;
+    min-height: 70vh;
 }
 
 footer{
     background-color: #545454;
     color:#c3c3c3;
-    font-size: 12px;
 }
 
 address{
@@ -76,9 +76,11 @@ a{
 input{
     font-size: 16px;
     padding: 5px;
+    border: 1px solid #ccc;
 }
 
 textarea{
+    border: 1px solid #ccc;
 	resize: none;
     width:97%;
 	padding:10px;
@@ -140,6 +142,10 @@ textarea{
 .ml3{
     margin-left: 3px;
 }
+
+.ml5{
+    margin-left: 5px;
+}
 .hide{
     display: none;
 }
@@ -164,43 +170,27 @@ textarea{
     background-color: #fafafa;
 }
 
-.btn{
-	background-color: #777;
-	color:white;
-	font-size: 0.9rem;
-	padding:0.1rem 0.4rem;
-	border-radius:0.1rem;
-	display: inline-flex;
-	align-items: center;
-	cursor: pointer;
-}
-
-.big.btn{
-	padding:0.2rem 2rem;
-	font-size: 1rem;
-}
-
 .link{
 	color:#1da1ff;
 }
 
 button{
+    box-shadow: 1px 1px 1px 1px #ccc;
+    cursor: pointer;
 	font-size: 15px;
-	width: 110px;
-	height: 40px;
 	padding: 5px 10px;
 	color: #fff;
 	border-radius: 3px;
-	border-style: none;
-	background-color: #6b6b6b;
+    border-style: none;
+    background-color: #777;    
 }
-button.small{
-    background-color: #777;
-    font-size: 14px;
-    padding: 4px 8px;
-    width: auto;
-    height: auto;
-}
+button:hover{box-shadow: 1px 1px 1px 1px #aaa;}
+.ck-editor button{box-shadow: none;}
+/* .ck.ck-editor {min-height: 534px;} */
+/* .ck.ck-content {min-height: 495px;} */
+.btn-group {text-align: center;margin-top: 20px;}
+.btn-group>button:first-child {	margin-right: 5px;}
+.btn-group.big button{	width: 110px;height: 40px;}
 
 /* navs */
 
@@ -230,14 +220,21 @@ button.small{
     padding: 0 15px 10px;
 }
 
+table{border-collapse: collapse;width: 100%;border-top: 3px solid dimgray;}
+.obj-table {margin-top: 20px;}
+.obj-table tr {	border-bottom: #eaeaea 1px solid;height: 50px}
+.obj-table th {	text-align: left;	width: 160px;	padding: 10px 20px;	background-color: #f9f9f9;}
+.obj-table td {	padding: 10px;}
+.obj-table input{width:680px}
+.obj-table textarea{width:670px}
 /* modified skkh.css by eunsung */
-.bbs_list {border-top:#656565 3px solid; width:100%; border-collapse:collapse;}
+.bbs_bgroup{display: flex; justify-content: flex-end}
+.bbs_list { margin-top: 10px}
 .bbs_list th { text-align:center; font-weight:bold; color:#333;}
-.bbs_list th:first-child {width: 10%}
-.bbs_list th:nth-child(2) {width: 55%}
+.bbs_list th:first-child {width: 70%}
+.bbs_list th:nth-child(2) {width: 10%}
 .bbs_list th:nth-child(3) {width: 10%}
 .bbs_list th:nth-child(4) {width: 10%}
-.bbs_list th:nth-child(5) {width: 15%}
 .bbs_list tr { border-bottom:#eaeaea 1px solid; height:50px; }
 .bbs_list td {text-align:center; font-size:14px; }
-.bbs_list td:nth-child(2) { font-size: 17px; text-align:left; }
+.bbs_list td:nth-child(1) { font-size: 17px; text-align:left; padding-left: 30px;}
