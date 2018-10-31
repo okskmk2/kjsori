@@ -29,7 +29,7 @@ width: auto;
 <div id="main">
 	<div class="wrap">
 		<div class="content">
-		<form action="/join" method="post">
+		<form action="/join" method="post" name="join">
 			<h2>회원가입</h2>
 			<div class="terms">
 				<div>
@@ -49,7 +49,7 @@ width: auto;
 				<tbody>
 					<tr>
 						<th>아이디(필수)</th>
-						<td><input name='kjsori_userId' required="required"><button id="id_dupl_chk_btn" class='ml5'>중복확인</button></td>
+						<td><input name='kjsori_userId' required="required"><button id="id_dupl_chk_btn" class='ml5' type="button">중복확인</button></td>
 					</tr>
 					<tr>
 						<th>이름(필수)</th>
@@ -98,12 +98,18 @@ width: auto;
 	let id_dupl_chk_btn = document.getElementById('id_dupl_chk_btn');
 
 	id_dupl_chk_btn.addEventListener('click', function() {
-		ajax({
+		axios({
 			url : "/api/idcheck",
 			method : "post",
-			data:{
-				id:'한글'
-			},
+			data:{id:document.forms.join.kjsori_userId.value},
+		}).then(res=>{
+			alert(res.data.message);
+		})
+/*		ajax({
+			url : "/api/idcheck",
+			method : "post",
+			data:JSON.stringify({id:'sdfaa'}),
+			dataType:"json",
 			onsuccess : function(response) {
 				alert(response);
 			},
@@ -111,6 +117,7 @@ width: auto;
 				alert(error);
 			}
 		});
+		*/
 	});
 
 </script>

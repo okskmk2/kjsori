@@ -29,7 +29,7 @@
 					<tbody>
 						<tr>
 							<th>제목</th>
-							<td><input name="title"></td>
+							<td><input name="title" required="required"></td>
 						</tr>
 						<tr>
 							<th>내용</th>
@@ -38,7 +38,7 @@
 						<c:if test="${empty userId}">
 							<tr>
 								<th>작성자</th>
-								<td><input name="author_id"></td>
+								<td><input name="author_id" required="required"></td>
 							</tr>
 						</c:if>
 					</tbody>

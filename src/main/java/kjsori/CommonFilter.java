@@ -19,7 +19,7 @@ import org.json.JSONObject;
 /**
  * Servlet Filter implementation class CommonFilter
  */
-@WebFilter("/api/*")
+//@WebFilter("/api/*")
 public class CommonFilter implements Filter {
 
     /**
@@ -60,6 +60,7 @@ public class CommonFilter implements Filter {
 		StringBuilder builder = new StringBuilder();
 		String buffer;
 		while ((buffer = input.readLine()) != null) {
+			System.out.println(buffer);
 			if (builder.length() > 0) {
 				builder.append("\n");
 			}

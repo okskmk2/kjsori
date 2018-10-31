@@ -13,36 +13,24 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
 
-/**
- * Servlet implementation class Idcheck
- */
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.Filter;
+import com.google.appengine.api.datastore.Query.FilterOperator;
+import com.google.appengine.api.datastore.Query.FilterPredicate;
+
 @WebServlet("/api/idcheck")
 public class Idcheck extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public Idcheck() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
-		String body = getBody(request);
-		JSONObject json = new JSONObject(body);
-		System.out.println(json.get("id"));
-		response.getWriter().print(json.toString());
-	}
-	
-    private String getBody(HttpServletRequest request) throws IOException {
-    	BufferedReader input = new BufferedReader(new InputStreamReader(request.getInputStream()));
+    	BufferedReader input = new BufferedReader(new InputStreamReader(request.getInputStream(), "UTF-8"));
 		StringBuilder builder = new StringBuilder();
 		String buffer;
 		while ((buffer = input.readLine()) != null) {
@@ -51,7 +39,22 @@ public class Idcheck extends HttpServlet {
 			}
 			builder.append(buffer);
 		}
-		return URLDecoder.decode(builder.toString(), "UTF-8");
-    }
-
+		response.setCharacterEncoding("UTF-8");
+		JSONObject jsoninput = new JSONObject(URLDecoder.decode(builder.toString(), "UTF-8")); // this parses the json
+		String id = (String) jsoninput.get("id");
+		
+		Filter userIdf = new FilterPredicate("userId", FilterOperator.EQUAL, id);
+		Query q = new Query("user").setFilter(userIdf);
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		PreparedQuery pq = datastore.prepare(q);
+		Entity user = pq.asSingleEntity();
+		JSONObject jsonoutput = new JSONObject();
+		if (user == null) {
+			jsonoutput.put("message", "사용가능한 아이디입니다.");
+		} else {
+			jsonoutput.put("message", "이미 존재하는 아이디입니다.");
+		}
+		response.getWriter().println(jsonoutput.toString());
+	}
+	
 }
